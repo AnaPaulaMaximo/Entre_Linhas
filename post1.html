@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das cores do Nordeste às páginas do mundo: raízes culturais na literatura infantil brasileira - Entre Linhas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #000000; font-family: 'Inter', sans-serif; color: #e5e5e5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        h1, h2, h3, h4 { font-family: 'Inter', sans-serif; font-weight: 900; color: #ffffff; letter-spacing: -0.04em; }
+        .text-accent { color: #a3e635; }
+        .header-glass { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid #262626; }
+        .prose-custom { font-size: 1.125rem; line-height: 1.75; }
+        .prose-custom p, .prose-custom ul, .prose-custom ol { margin-bottom: 1.5em; }
+        .prose-custom h2 { font-size: 2.25rem; margin-top: 2em; margin-bottom: 1em; }
+        .prose-custom a { color: #a3e635; text-decoration: underline; transition: opacity 0.3s; }
+        .prose-custom a:hover { opacity: 0.8; }
+        .prose-custom blockquote { border-left: 4px solid #a3e635; padding-left: 1.5em; font-style: italic; color: #ffffff; }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="sticky top-0 w-full z-50 header-glass">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-black tracking-tighter text-white">ENTRE LINHAS</a>
+            <a href="index.html#blog" class="font-semibold text-neutral-300 hover:text-white transition-colors inline-flex items-center">
+                <i data-lucide="arrow-left" class="h-4 w-4 mr-2"></i> Voltar ao Blog
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="max-w-4xl mx-auto text-center mb-16">
+                    <p class="text-accent font-semibold">13 de Setembro, 2025</p>
+                    <h1 class="text-5xl md:text-7xl font-black my-4">
+                        Das cores do Nordeste às páginas do mundo: raízes culturais na literatura infantil brasileira
+                    </h1>
+                </header>
+
+                <figure class="max-w-5xl mx-auto mb-16">
+                    <img src="images/cacto.webp" alt="Cacto." class="w-full h-auto object-cover rounded-lg shadow-xl">
+                </figure>
+
+                <div class="prose-custom max-w-4xl mx-auto text-neutral-300">
+                    <p>Natural de Recife, André Neves carrega em seu DNA artístico a riqueza cultural do Nordeste brasileiro, e essa identidade transborda para suas criações de forma orgânica e potente. Suas obras são uma prova de que a valorização da cultura regional, longe de limitar, pode ser o ponto de partida para a criação de narrativas universais.</p>
+                    <p>Em sua coleção "Nordestinamente", por exemplo, elementos como a dura realidade da seca são transformados em um cenário poético onde a força do imaginário infantil se revela. As imagens de crianças com latas d'água na cabeça não são apenas um retrato social, mas um símbolo de resistência e esperança. A paleta de cores terrosas, o sol forte e a flora característica do sertão compõem uma estética que, ao mesmo tempo que é local, dialoga com temas universais como a resiliência e a capacidade de sonhar.</p>
+                    <p>Ao fazer isso, ele apresenta às crianças um Brasil plural e diverso, fugindo de estereótipos e mostrando a riqueza de nossas manifestações culturais. A cultura nordestina em sua obra não é um pano de fundo exótico, mas a alma da narrativa, provando que as grandes histórias, aquelas que tocam a todos, muitas vezes nascem do nosso próprio quintal.</p>           
+                </div>
+                
+                <div class="text-center mt-20">
+                     <a href="index.html#blog" class="font-bold text-lg inline-flex items-center text-accent hover:opacity-80">
+                         <i data-lucide="arrow-left" class="h-5 w-5 mr-2"></i> Ver todos os posts
+                     </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-black border-t border-neutral-900 py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <a href="index.html" class="text-2xl font-black tracking-tighter text-white">ENTRE LINHAS</a>
+            <p class="text-neutral-700 mt-12 text-sm">&copy; <span id="current-year4"></span> Blog Entre Linhas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('current-year4').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

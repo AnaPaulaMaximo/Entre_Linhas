@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O encantamento do cotidiano: poesia e emoção nos pequenos gestos - Entre Linhas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #000000; font-family: 'Inter', sans-serif; color: #e5e5e5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        h1, h2, h3, h4 { font-family: 'Inter', sans-serif; font-weight: 900; color: #ffffff; letter-spacing: -0.04em; }
+        .text-accent { color: #a3e635; }
+        .header-glass { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid #262626; }
+        .prose-custom { font-size: 1.125rem; line-height: 1.75; }
+        .prose-custom p, .prose-custom ul, .prose-custom ol { margin-bottom: 1.5em; }
+        .prose-custom h2 { font-size: 2.25rem; margin-top: 2em; margin-bottom: 1em; }
+        .prose-custom a { color: #a3e635; text-decoration: underline; transition: opacity 0.3s; }
+        .prose-custom a:hover { opacity: 0.8; }
+        .prose-custom blockquote { border-left: 4px solid #a3e635; padding-left: 1.5em; font-style: italic; color: #ffffff; }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="sticky top-0 w-full z-50 header-glass">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-black tracking-tighter text-white">ENTRE LINHAS</a>
+            <a href="index.html#blog" class="font-semibold text-neutral-300 hover:text-white transition-colors inline-flex items-center">
+                <i data-lucide="arrow-left" class="h-4 w-4 mr-2"></i> Voltar ao Blog
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="max-w-4xl mx-auto text-center mb-16">
+                    <p class="text-accent font-semibold">24 de Setembro, 2025</p>
+                    <h1 class="text-5xl md:text-7xl font-black my-4">
+                      O encantamento do cotidiano: poesia e emoção nos pequenos gestos
+                    </h1>
+                </header>
+
+                <figure class="max-w-5xl mx-auto mb-16">
+                    <img src="images/criança_dente_de_leão.jpg" alt="Mão de uma criança segurando um dente-de-leão contra o céu." class="w-full h-auto object-cover rounded-lg shadow-xl">
+                </figure>
+
+                <div class="prose-custom max-w-4xl mx-auto text-neutral-300">
+                    <p>Em um mundo que corre, a obra de André Neves nos puxa pelo braço e sussurra: "pare e olhe". Suas narrativas são um antídoto para a pressa, um convite para reencontrar a magia nas coisas simples. Ele tem o dom de transformar o vento, uma sombra ou o silêncio de um menino em matéria-prima para a mais pura poesia.</p>
+                    <p>Em "Tom", acompanhamos a história de um garoto que vive em seu próprio universo contemplativo, cercado de pássaros. A narrativa, conduzida pelo olhar do irmão, nos ensina sobre a beleza de outras formas de existir e de se comunicar. Não há grandes eventos, mas a imensa jornada de se aproximar do mundo do outro. É a poesia do silêncio, do gesto, da aceitação.</p>
+                    <p>Já em "Obax", a protagonista percorre a savana africana com sua imaginação fértil. Suas histórias fantásticas, como a chuva de flores, transformam o cenário ao seu redor. A realidade e o sonho se entrelaçam, mostrando que o encantamento é, acima de tudo, uma escolha de como ver o mundo.</p>
+                    <p>A literatura de André Neves resgata um tempo de leitura mais lento e profundo. Suas obras ensinam aos adultos, talvez mais do que às crianças, a importância de cultivar um olhar sensível. Elas nos questionam: quando foi a última vez que paramos para realmente observar as nuvens ou para inventar uma história sobre o que o vento nos disse? Seus livros são um lembrete de que a vida, em sua essência, é feita de pequenos e valiosos encantamentos.</p>
+                </div>
+                
+                <div class="text-center mt-20">
+                     <a href="index.html#blog" class="font-bold text-lg inline-flex items-center text-accent hover:opacity-80">
+                         <i data-lucide="arrow-left" class="h-5 w-5 mr-2"></i> Ver todos os posts
+                     </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-black border-t border-neutral-900 py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <a href="index.html" class="text-2xl font-black tracking-tighter text-white">ENTRE LINHAS</a>
+            <p class="text-neutral-700 mt-12 text-sm">&copy; <span id="current-year2"></span> Blog Entre Linhas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('current-year2').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

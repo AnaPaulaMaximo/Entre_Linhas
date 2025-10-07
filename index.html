@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entre Linhas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: #000000;
+        font-family: "Inter", sans-serif;
+        color: #e5e5e5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Inter", sans-serif;
+        font-weight: 900;
+        color: #ffffff;
+        letter-spacing: -0.04em;
+      }
+
+      .text-accent {
+        color: #a3e635; /* lime-400 */
+      }
+
+      .hero-bg {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
+          ),
+          url("https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2573&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .header-glass {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid #262626;
+      }
+
+      .card-brutalist {
+        border: 1px solid #262626;
+        transition: background-color 0.3s ease, color 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .card-brutalist:hover {
+        background-color: #a3e635;
+        border-color: #a3e635;
+        color: #000000;
+      }
+
+      .card-brutalist h3,
+      .card-brutalist h4,
+      .card-brutalist p,
+      .card-brutalist span {
+        transition: color 0.3s ease;
+      }
+
+      .card-brutalist:hover h3,
+      .card-brutalist:hover h4,
+      .card-brutalist:hover p,
+      .card-brutalist:hover span {
+        color: #000000;
+      }
+
+      .card-brutalist:hover i {
+        color: #000000 !important;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 0.7s ease-out forwards;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header
+      id="header"
+      class="fixed top-0 w-full z-50 transition-transform duration-300"
+    >
+      <nav
+        class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center"
+      >
+        <a href="#" class="text-xl font-black tracking-tighter text-white"
+          >ANDRÉ NEVES</a
+        >
+        <div class="hidden md:flex items-center space-x-8 font-semibold">
+          <a
+            href="#home"
+            class="text-neutral-300 hover:text-white transition-colors"
+            >Início</a
+          >
+          <a
+            href="#about"
+            class="text-neutral-300 hover:text-white transition-colors"
+            >Sobre</a
+          >
+          <a
+            href="#works"
+            class="text-neutral-300 hover:text-white transition-colors"
+            >Obras</a
+          >
+          <a
+            href="#blog"
+            class="text-neutral-300 hover:text-white transition-colors"
+            >Blog</a
+          >
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-white">
+          <i data-lucide="menu" class="h-6 w-6"></i>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden header-glass">
+        <a
+          href="#home"
+          class="block py-3 px-6 text-neutral-300 hover:bg-neutral-900"
+          >Início</a
+        >
+        <a
+          href="#about"
+          class="block py-3 px-6 text-neutral-300 hover:bg-neutral-900"
+          >Sobre</a
+        >
+        <a
+          href="#works"
+          class="block py-3 px-6 text-neutral-300 hover:bg-neutral-900"
+          >Obras</a
+        >
+        <a
+          href="#blog"
+          class="block py-3 px-6 text-neutral-300 hover:bg-neutral-900"
+          >Blog</a
+        >
+
+        >
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="min-h-screen hero-bg flex items-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 class="text-6xl md:text-8xl font-black text-white max-w-4xl">
+            ENTRE <span class="text-accent">LINHAS</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-neutral-300 max-w-2xl mt-6">
+            Explorando a condição humana através da literatura. Histórias que
+            tocam, desafiam e transformam.
+          </p>
+        </div>
+      </section>
+
+      <section id="about" class="py-20 md:py-32 bg-[#0a0a0a]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            <img
+              src="images/andre-neves.jpg"
+              alt="Foto do autor André Neves"
+              class="w-full h-auto object-cover shadow-2xl"
+            />
+            <div>
+              <h2 class="text-5xl md:text-6xl font-black mb-8">
+                Sobre André Neves
+              </h2>
+              <div class="space-y-6 text-lg text-neutral-300 leading-relaxed">
+                <p>
+                  André Neves nasceu em 31 de outubro de 1973, na cidade de
+                  Recife (PE), e atualmente vive em Porto Alegre (RS). É autor e
+                  ilustrador de obras voltadas ao público infantil e juvenil,
+                  reconhecido por seu estilo poético e imagético. Formado em
+                  Artes Plásticas, também atua como arte-educador, ministrando
+                  palestras e oficinas sobre literatura e ilustração voltadas às
+                  novas gerações de leitores e artistas. Com uma trajetória
+                  consolidada de quase uma década dedicando-se à ilustração,
+                  Neves acumula mais de 50 títulos publicados no Brasil e em
+                  diversos países da Europa.
+                </p>
+                <p>
+                  Sua carreira é marcada por importantes reconhecimentos: em
+                  2003, recebeu menção honrosa no Prêmio Jabuti pelo livro Obax;
+                  e, em 2017, conquistou o terceiro lugar na categoria
+                  “Ilustração de Livro Infantil ou Juvenil” com a obra Nuno e as
+                  Coisas Incríveis. Além desses prêmios, várias de suas
+                  publicações foram distinguidas com o selo “Altamente
+                  Recomendável”, conferido pela Fundação Nacional do Livro
+                  Infantil e Juvenil (FNLIJ), reafirmando sua relevância no
+                  panorama da literatura para crianças e jovens.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="works" class="py-20 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mb-16">
+            <h2 class="text-5xl md:text-6xl font-black">Obras Publicadas</h2>
+            <p class="text-lg text-neutral-400 mt-4">
+              Uma coleção que une arte e narrativa para despertar a imaginação e
+              as emoções do leitor infantil.
+            </p>
+          </div>
+          <h3 class="text-3xl font-black mb-8">Destaques</h3>
+          <div
+            class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+            id="featured-books"
+          ></div>
+          <div
+            class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            id="other-books"
+          ></div>
+        </div>
+      </section>
+
+      <section id="blog" class="py-20 md:py-32 bg-[#0a0a0a]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mb-16">
+            <h2 class="text-5xl md:text-6xl font-black">Blog Literário</h2>
+            <p class="text-lg text-neutral-400 mt-4">
+              Reflexões sobre literatura, processo criativo e a arte de contar
+              histórias.
+            </p>
+          </div>
+          <div class="mb-16" id="featured-post"></div>
+          <div
+            class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            id="blog-posts"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black border-t border-neutral-900 py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <a href="#" class="text-2xl font-black tracking-tighter text-white"
+          >ANDRÉ NEVES</a
+        >
+        <p class="text-neutral-400 mt-4 max-w-md mx-auto">
+          Autor contemporâneo explorando as profundezas da experiência humana.
+        </p>
+        <div class="flex justify-center space-x-6 mt-8">
+          <a
+            href="https://www.instagram.com/neves.ilustra?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            class="text-neutral-400 hover:text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i data-lucide="instagram" class="h-6 w-6"></i>
+          </a>
+
+          <a
+            href="https://nevesandre.com.br/?fbclid=PAZXh0bgNhZW0CMTEAAafJEkQhXCCQMzDqFO1IgK6KxWl2FFqyxO4QZ1bP7l3ahykXv9lrFqivNGfzoA_aem_QMDbzgZxB-X1HPp5KPg-6g"
+            class="text-neutral-400 hover:text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i data-lucide="shopping-bag" class="h-6 w-6"></i>
+          </a>
+        </div>
+
+        <p class="text-neutral-700 mt-12 text-sm">
+          &copy; <span id="current-year"></span> ANDRÉ NEVES. Todos os direitos
+          reservados. <br> Desenvolvido por Ana Paula Maximo e Maria Isabela Saito Santos
+        </p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+
+        // --- HEADER & MENU ---
+        const header = document.getElementById("header");
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener("click", () =>
+            mobileMenu.classList.add("hidden")
+          );
+        });
+
+        let lastScrollY = window.scrollY;
+        window.addEventListener("scroll", () => {
+          header.classList.toggle("header-glass", window.scrollY > 50);
+          if (window.scrollY > lastScrollY && window.scrollY > 200) {
+            header.classList.add("-translate-y-full");
+          } else {
+            header.classList.remove("-translate-y-full");
+          }
+          lastScrollY = window.scrollY;
+        });
+
+        // --- DYNAMIC CONTENT ---
+        // EDITE OS LIVROS E LINKS AQUI
+        const books = [
+          {
+            title: "Caligrafia de Dona Sofia",
+            description:
+              "Uma senhora que ama poemas espalha sua paixão pela cidade através de cartões poéticos distribuídos pelo carteiro, transformando a vida dos moradores.",
+            image: "images/1.png",
+            featured: true,
+            link: "https://www.amazon.com.br/Caligrafia-Dona-Sofia-Andr%C3%A9-Neves/dp/8535629920", // Altere este link
+          },
+          {
+            title: "Lino",
+            description:
+              "Um porquinho chamado Lino parte em uma jornada inesperada ao ser comprado e descobre o paradeiro de sua amiga coelha desaparecida da loja de brinquedos.",
+            image: "images/2.png",
+            featured: true,
+            link: "https://www.amazon.com.br/Lino-Andr%C3%A9-Neves/dp/8535643648", // Altere este link
+          },
+          {
+            title: "Margarida",
+            description:
+              "Uma vaca insatisfeita com sua rotina foge da fazenda em busca de felicidade e aventura no mundo.",
+            image: "images/3.png",
+            featured: true,
+            link: "https://www.amazon.com.br/Margarida-Andr%C3%A9-Neves/dp/8562549150", // Altere este link
+          },
+          {
+            title: "Maria Mole",
+            description:
+              "Uma menina que se tornou 'cinza' pelo medo de se expressar recupera suas 'cores' e coragem para demonstrar seus verdadeiros sentimentos e vontades",
+            image: "images/4.png",
+            featured: false,
+            link: "https://www.amazon.com.br/Maria-Mole-Andr%C3%A9-Neves/dp/8534920362", // Altere este link
+          },
+          {
+            title: "Maria Peçonha",
+            description:
+              "A história de uma artesã que ficou famosa em sua cidade por um fenômeno mágico de fazer nascer flores onde urinava, mas cuja reputação muda drasticamente.",
+            image: "images/5.png",
+            featured: false,
+            link: "https://www.amazon.com.br/Maria-Pe%C3%A7onha-Andr%C3%A9-Neves/dp/8573389540", // Altere este link
+          },
+          {
+            title: "Nuno e as Coisas Incríveis",
+            description:
+              "Um menino que se expressa por meio de desenhos encontra uma menina que usa palavras, e ele tenta mostrar a ela o que as imagens podem comunicar além do texto.",
+            image: "images/6.png",
+            featured: false,
+            link: "https://www.amazon.com.br/Nuno-Coisas-Incr%C3%ADveis-Andr%C3%A9-Neves/dp/8561695617", // Altere este link
+          },
+        ];
+
+        // --- Alteração da Imagem e Link ---
+        const createBookCard = (book) => `
+                  <article class="card-brutalist group flex flex-col">
+                      <div class="h-64 bg-neutral-900 flex items-center justify-center">
+                        <img src="${book.image}" alt="Capa do livro ${book.title}" class="max-w-full max-h-full object-contain">
+                      </div>
+                      <div class="p-8 flex flex-col flex-grow">
+                          <h4 class="text-2xl font-black mb-3">${book.title}</h4>
+                          <p class="mb-6 flex-grow">${book.description}</p>
+                          <a href="${book.link}" target="_blank" rel="noopener noreferrer" class="font-bold inline-flex items-center text-accent group-hover:text-black mt-auto">
+                              Saiba Mais <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                          </a>
+                      </div>
+                  </article>`;
+
+        const featuredBooksContainer =
+          document.getElementById("featured-books");
+        const otherBooksContainer = document.getElementById("other-books");
+        books.forEach((book) => {
+          const cardHTML = createBookCard(book);
+          if (book.featured) {
+            featuredBooksContainer.innerHTML += cardHTML;
+          } else {
+            otherBooksContainer.innerHTML += cardHTML;
+          }
+        });
+
+        // POSTS DO BLOG
+        const blogPosts = [
+          {
+            title:
+              "Entre o traço e a palavra: o poder das imagens na literatura infantil",
+            date: "03 de Outubro, 2025",
+            excerpt:
+              "Neste artigo, convido você a enxergar com os olhos da imaginação, explorando como André Neves transforma cada cor e traço em narrativa — revelando que, em seus livros, a imagem também escreve, emociona e ensina a ler o mundo de outros modos.",
+            link: "post4.html",
+            featured: true,
+          },
+          {
+            title:
+              "O encantamento do cotidiano: poesia e emoção nos pequenos gestos",
+            date: "24 de Setembro, 2025",
+            link: "post3.html",
+            featured: false,
+          },
+          {
+            title:
+              "Vozes da infância: o papel da imaginação na formação do leitor sensível",
+            date: "20 de Setembro, 2025",
+            link: "post2.html",
+            featured: false,
+          },
+          {
+            title:
+              "Das cores do Nordeste às páginas do mundo: raízes culturais na literatura infantil brasileira",
+            date: "13 de Setembro, 2025",
+            link: "post1.html",
+            featured: false,
+          },
+        ];
+
+        const createFeaturedPost = (post) => `
+                  <a href="${post.link}" class="card-brutalist p-8 md:p-12 group grid md:grid-cols-2 gap-8 items-center block">
+                      <div>
+                          <p class="text-sm font-semibold mb-4 text-neutral-400 group-hover:text-black">${post.date}</p>
+                          <h3 class="text-4xl font-black mb-4">${post.title}</h3>
+                          <p class="mb-6">${post.excerpt}</p>
+                      </div>
+                      <span class="font-bold text-lg inline-flex items-center text-accent group-hover:text-black">
+                          Ler Artigo Completo <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                      </span>
+                  </a>`;
+
+        const createPostCard = (post) => `
+                  <a href="${post.link}" class="card-brutalist p-8 group flex flex-col">
+                      <div class="flex-grow">
+                          <p class="text-sm font-semibold mb-4 text-neutral-400 group-hover:text-black">${post.date}</p>
+                          <h4 class="text-2xl font-black mb-3">${post.title}</h4>
+                      </div>
+                      <span class="font-bold mt-6 inline-flex items-center text-accent group-hover:text-black">
+                          Ler Mais <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                      </span>
+                  </a>`;
+
+        const featuredPost = blogPosts.find((p) => p.featured);
+        if (featuredPost) {
+          document.getElementById("featured-post").innerHTML =
+            createFeaturedPost(featuredPost);
+        }
+        blogPosts
+          .filter((p) => !p.featured)
+          .forEach((post) => {
+            document.getElementById("blog-posts").innerHTML +=
+              createPostCard(post);
+          });
+
+        // --- FORM & FOOTER ---
+        const contactForm = document.getElementById("contact-form");
+        if (contactForm) {
+          contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            contactForm.classList.add("hidden");
+            document
+              .getElementById("success-message")
+              .classList.remove("hidden");
+            lucide.createIcons();
+          });
+        }
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+
+        // --- ANIMATIONS ---
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in-up");
+                entry.target.style.opacity = 1;
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+        );
+
+        document
+          .querySelectorAll(
+            'h1, h2, h3, p, img, article, form, label, a[class*="card-brutalist"]'
+          )
+          .forEach((el) => {
+            el.style.opacity = 0;
+            observer.observe(el);
+          });
+
+        lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>
